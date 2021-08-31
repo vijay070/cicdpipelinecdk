@@ -10,7 +10,7 @@ from aws_cdk import core as cdk
 from aws_cdk import core
 
 from cdkpipeline_vpc.cdkpipeline_vpc_stack import CdkpipelineVpcStack
-
+from cdkpipeline_vpc.cdk_pipeline_stack import CdkPipelineStack
 
 app = core.App()
 CdkpipelineVpcStack(app, "CdkpipelineVpcStack",
@@ -30,5 +30,7 @@ CdkpipelineVpcStack(app, "CdkpipelineVpcStack",
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
     )
+CdkPipelineStack(app, "CdkPipelineStack",
+        )
 
 app.synth()
